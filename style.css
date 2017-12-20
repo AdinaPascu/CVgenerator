@@ -1,0 +1,220 @@
+* {
+	margin: 0;
+	box-sizing: border-box;
+}
+.IN-widget {
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 2;
+}
+body {
+	position: relative;
+	font-family: arial;
+}
+svg {
+	position: absolute;
+	top: 0;
+	fill: rgb(227, 182, 153);
+	z-index: -1;
+}
+#noLinkedIn {
+	position: absolute;
+	right: 0;
+	top: 25px;
+	width: 140px;
+	border: 0;
+	background-color: rgb(0, 119, 181);
+	color: rgb(255, 255, 255);
+}
+/*#fbBtn {
+	position: absolute;
+	top: 50px;
+	right: 0;
+	z-index: 2;
+}*/
+main {
+	width: 100vw;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+}
+aside {
+	flex-basis: 30%;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: flex-start;
+	background-color: rgba(150, 150, 150, 0.5);
+}
+article {
+	flex-basis: 70%;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: flex-start;
+}
+.main {
+	margin: 0px 40px;
+}
+.block{
+	position: relative;
+	margin: 10px 0;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+}
+.hide {
+	visibility: hidden;
+}
+.block:hover .hide {
+	visibility: visible;
+	cursor: pointer;
+}
+.block > :nth-child(2) {
+	flex-grow: 2;
+	margin: 0px 10px;
+}
+.block .hide:nth-child(2) {
+	flex-grow: 0;
+}
+h3 {
+	padding: 10px 0px;
+	letter-spacing: 5px;
+	text-transform: uppercase;
+	border-bottom: 2px solid black;
+}
+.pointer:hover {
+	cursor: pointer;
+}
+#pic {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-basis: 250px;
+}
+.inputfile {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+#picCrop
+{
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    margin: 10px;
+    position: relative;
+    border-radius: 50%;
+}
+#mypic {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 400px;
+}
+#hidePic{
+	align-self: flex-start;
+	font-size: 24px;
+}
+#rotate {
+	align-self: flex-end;
+	font-size: 24px;
+}
+#contact img {
+	width: 20px;
+	height: 20px;
+}
+#profileGenderMale {
+	flex-grow: 2;
+	margin: 0px 10px;
+}
+input[type="date"]{
+	background-color: rgba(225,225,225,0);
+	border: 0;
+	font-family: arial;
+	font-size: 16px;
+}
+
+
+header {
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	justify-content: center;
+	flex-basis: 250px;
+}
+h1 {
+	font-size: 45px;
+	padding: 10px 0px;
+	text-transform: uppercase;
+}
+.info h3 {
+	border: 0;
+}
+.period {
+	padding-right: 10px;
+	border-right: 2px solid black;
+}
+#periodWindow {
+	position: absolute;
+	top: 0px;
+	left: -200px;
+	width: 200px;
+	color: white;
+	background-color: darkgrey;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	z-index: 1;
+}
+#periodWindow div {
+	display: inline-block;
+}
+#periodWindow button {
+
+}
+#periodWindow div p:nth-child(3) {
+	background-color: black;
+}
+
+/*Range style*/
+/*Chrome*/
+input[type="range"] {
+	overflow: hidden;
+	max-width: 100px;
+	height: 10px;
+    -webkit-appearance: none;
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid black;
+}
+    
+    input[type='range']::-webkit-slider-runnable-track {
+      height: 10px;
+      -webkit-appearance: none;
+      color: black;
+      margin-top: -1px;
+    }
+    
+    input[type='range']::-webkit-slider-thumb {
+      width: 0;
+      -webkit-appearance: none;
+      height: 0;
+      box-shadow: -80px 0 0 80px black;
+    }
+
+/* FF*/
+input[type="range"]::-moz-range-progress {
+  background-color: black; 
+}
+input[type="range"]::-moz-range-track {  
+  background-color: rgba(255, 255, 255, 0);
+}
+/* IE*/
+input[type="range"]::-ms-fill-lower {
+  background-color: black; 
+}
+input[type="range"]::-ms-fill-upper {  
+  background-color: rgba(255, 255, 255, 0);
+}

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CV generator</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<svg width="100vw" height="250" viewBox="0 0 200 200" preserveAspectRatio="none">
+		<polygon points="0,0 200,0 200,200 0,50" />
+	</svg>
+	<button id="noLinkedIn">Don't use LinkedIn</button>
+	<main id="main">
+		<aside>
+			<div id="pic">
+				<input type="file" name="file" id="file" class="inputfile" />
+				<label for="file"><img id="upload" class="pointer" src="img/upload.png"></label>
+				<div id="picCrop">
+					<img id="mypic" src="img/photo.jpg">
+				</div>
+				<span id="hidePic" class="pointer">&#9746;</span>
+				<span id="rotate" class="pointer">&#8635;</span>
+			</div>
+			<div id="contact" class="main">
+				<h3 class="block">Contact</h3>
+				<div id="contactPhone" class="block">
+					<img src="img/phone.png">
+					<span id="contactPhoneInfo" contenteditable="true">Enter your phone number</span>
+					<div>
+						<span class="no hide">&#9746;</span>
+					</div>
+				</div>
+				<div id="contactAddress" class="block">
+					<img id="contactAddressIcon" class="pointer" src="img/location.png">
+					<span id="contactAddressInfo" contenteditable="true">Click on the icon or insert address</span>
+					<div>
+						<span class="no hide">&#9746;</span>
+					</div>
+				</div>
+				<div id="contactEmail" class="block">
+					<img src="img/mail.png">
+					<span id="contactEmailInfo" contenteditable="true">Enter your email address</span>
+					<div>
+						<span class="no hide">&#9746;</span>
+					</div>
+				</div>
+				<div id="contactWeb" class="block">
+					<img src="img/web.png" id="web">
+					<span id="contactWebInfo" contenteditable="true">Enter the URL to your webpage</span>
+					<div>
+						<span class="no hide">&#9746;</span>
+					</div>
+				</div>
+				<div id="contactSkype" class="block">
+					<img src="img/skype.png">
+					<span id="contactSkypeInfo" contenteditable="true">Enter your skype name</span>
+					<div>
+						<span class="no hide">&#9746;</span>
+					</div>
+				</div>
+				
+			</div>
+			<div id="profile" class="main">
+				<h3 class="block">Profile</h3>
+				<div id="profileGender" class="block">
+					<span>Gender:</span>
+					<span id="profileGenderFemale" class="pointer">Female</span>
+					<span id="profileGenderMale" class="pointer">Male</span>
+					<div>
+						<span class="no hide">&#9746;</span>
+					</div>
+				</div>
+				<div id="profileNationality" class="block">
+					<span>Nationality:</span>
+					<span id="profileNationalityInfo" contenteditable="true">Enter your nationality</span>
+					<div>
+						<span class="no hide">&#9746;</span>
+					</div>
+				</div>
+				<div id="profileBirthDate" class="block">
+					<span>Birth date: </span>
+					<input type="date" name="bday">
+					<div>
+						<span class="no hide">&#9746;</span>
+					</div>
+				</div>
+				<div id="profileDescription" class="block">
+					<span id="profileDescriptionInfo" contenteditable="true">Enter a short description about yourself.</span>
+					<div>
+						<span class="no hide">&#9746;</span>
+					</div>
+				</div>
+			</div>
+			<div id="personalSkills" class="main">
+				<h3 class="block">Personal skills <span class="no hide">&#9746;</span></h3>
+				<div id="motherTongue" class="personalSkills block">
+					<span>Mother tongue</span>
+					<span id="motherTongueInfo" contenteditable="true">Enter a language</span>
+					<div>
+						<span class="no hide">&#9746;</span>
+					</div>
+				</div>
+				<div id="otherLanguages" class="personalSkills">
+					<div id="language" class="language block skill">
+						<span contenteditable="true">Enter a language</span>
+						<input type="range" id="range" value="90">
+						<div>
+							<span class="add hide">&#8862;</span>
+							<span class="no hide">&#9746;</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="communicationsSkillDiv" class="main">
+				<h3 class="block">Communication skills<span class="no hide">&#9746;</span></h3>
+				<ul>
+					<div id="communicationsSkill" class="block skill">
+						<li contenteditable="true">Enter skill</li>
+						<div>
+							<span class="add hide">&#8862;</span>
+							<span class="no hide">&#9746;</span>
+						</div>
+					</div>
+				</ul>
+			</div>
+			<div id="jobRelatedSkillDiv" class="main">
+				<h3 class="block">Job-related skills<span class="no hide">&#9746;</span></h3>
+				<ul>
+					<div id="jobRelatedSkill" class="block skill">
+						<li contenteditable="true">Enter skill</li>
+						<div>
+							<span class="add hide">&#8862;</span>
+							<span class="no hide">&#9746;</span>
+						</div>
+					</div>
+				</ul>
+			</div>
+			<div id="otherSkillDiv" class="main">
+				<h3 class="block">Other skills<span class="no hide">&#9746;</span></h3>
+				<ul>
+					<div id="otherSkill" class="block skill">
+						<li contenteditable="true">Enter skill</li>
+						<div>
+							<span class="add hide">&#8862;</span>
+							<span class="no hide">&#9746;</span>
+						</div>
+					</div>
+				</ul>
+			</div>
+		</aside>
+		<article>
+			<header>
+				<div class="info">
+					<h1 id="name" contenteditable="true">Enter your name</h1>
+					<h3 id="jobAppliedFor" contenteditable="true">Enter job applied for</h3>
+				</div>
+			</header>
+			<section id="educationDiv" class="main">
+				<h3 class="block">Education and training<span class="no hide">&#9746;</span></h3>
+				<div id="education" class="block">
+					<div class="period">
+						<span class="selectStart pointer">Select start date</span>
+						<span>-</span>
+						<p class="selectEnd pointer">Select end date</p>
+					</div>
+					<div class="educationDetails">
+						<p contenteditable="true">Enter title of qualification awarded</p>
+						<div>
+							<span contenteditable="true">Enter organization providing education and training</span>
+							<span>,</span>
+							<span contenteditable="true">Enter city</span>
+							<span>,</span>
+							<span contenteditable="true">Enter country</span>
+						</div>
+						<p contenteditable="true">Details</p>
+					</div>
+					<div>
+						<span class="add hide">&#8862;</span>
+						<span class="no hide">&#9746;</span>
+					</div>
+				</div>
+			</section>
+			<section id="experienceDiv" class="main">
+				<h3 class="block">Work experience<span class="no hide">&#9746;</span></h3>
+				<div id="experience" class="block">
+					<div class="period">
+						<span class="selectStart pointer">Select start date</span>
+						<span>-</span>
+						<p class="selectEnd pointer">Select end date</p>
+					</div>
+					<div class="experienceDetails">
+						<p contenteditable="true">Enter ocupation or position held</p>
+						<div>
+							<span contenteditable="true">Enter employer's name</span>
+							<span>,</span>
+							<span contenteditable="true">Enter city</span>
+							<span>,</span>
+							<span contenteditable="true">Enter country</span>
+						</div>
+						<p contenteditable="true">Details</p>
+					</div>
+					<div>
+						<span class="add hide">&#8862;</span>
+						<span class="no hide">&#9746;</span>
+
+					</div>
+				</div>
+			</section>
+			<section id="awardDiv" class="main">
+				<h3 class="block">Awards and certificates<span class="no hide">&#9746;</span></h3>
+				<div id="award" class="block">
+					<p contenteditable="true">Enter award or certificate title</p>
+					<span>(<span contenteditable="true">date received</span>)</span>
+					<div>
+						<span class="add hide">&#8862;</span>
+						<span class="no hide">&#9746;</span>
+					</div>
+				</div>
+			</section>
+			<section id="personalProjectDiv" class="main">
+				<h3 class="block">Personal Projects<span class="no hide">&#9746;</span></h3>
+				<div id="personalProject" class="block">
+					<p contenteditable="true">Enter a title for your project</p>
+					<p contenteditable="true">Details</p>
+					<div>
+						<span class="add hide">&#8862;</span>
+						<span class="no hide">&#9746;</span>
+					</div>
+				</div>
+			</section>
+		</article>
+	</main>
+	<footer>
+	</footer>
+    <script type="text/javascript" src="//platform.linkedin.com/in.js">
+    api_key: 86viikcqfjtznx
+    authorize: true
+    scope: r_basicprofile r_emailaddress 
+    </script>
+ 	<script type="in/Login"></script>
+	<script type="text/javascript" src="js/image.js"></script>
+	<script type="text/javascript" src="js/period.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+	<!-- <fb:login-button 
+		  id="fbBtn"
+		  scope="email,user_about_me,user_birthday,user_education_history,user_hometown,user_location,user_photos,user_website,user_work_history"
+		  onlogin="checkLoginState();">
+	</fb:login-button> -->
+</body>
+</html>
